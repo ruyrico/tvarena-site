@@ -58,28 +58,36 @@ Contagem de notícias por time e o mínimo de 3 matérias por time/atleta são c
 - Não mude layout, cores ou estrutura sem pedido do Ruy.
 - Se algo der errado no `check.py` e você não conseguir corrigir, **não dê push**; relate o problema no resumo.
 
-## Plantão de 2 em 2 horas (Flamengo e futebol)
+## Plantão de 2 em 2 horas (todos os clubes, equipes, atletas e lutadores)
 
-Uma tarefa separada roda a cada 2 horas só para **notícias quentes de futebol**. Regras dela:
+Uma tarefa separada roda a cada 2 horas atrás de **notícias quentes de todos os esportes do site**:
+os 40 clubes das Séries A e B, as equipes de vôlei, basquete e automobilismo, os lutadores e os tenistas.
+Para ver os identificadores (slugs) de todos: `python3 tools/slugs.py` (ou `python3 tools/slugs.py lutas`).
 
-1. `git pull --rebase` antes de começar e de novo antes do push (a atualização diária pode ter mexido no arquivo).
-2. Pesquise o que saiu nas **últimas ~3 horas** sobre futebol brasileiro, com prioridade para o **Flamengo**
-   (jogos, escalação, lesões, contratações e saídas confirmadas, decisões da diretoria, punições, bastidores com fonte).
+1. `git pull --rebase` antes de começar e de novo antes do push (outra tarefa pode ter mexido no arquivo).
+2. Pesquise o que saiu nas **últimas ~3 horas**: jogos/lutas/corridas, escalação, lesões, contratações e saídas confirmadas,
+   decisões de diretoria, punições, anúncios de lutas, resultados, rankings, bastidores com veículo nomeado.
 3. **Só publique se for realmente relevante e novo.** Antes, confira se o assunto já existe no site
-   (procure no `index.html` por palavras-chave, títulos e URLs de fonte, e veja `git log`). Boato sem fonte séria
-   ("especula-se", "segundo apuração" sem veículo nomeado) não entra. **Se não houver nada bom, não altere nada e não faça commit.**
-4. Onde entra (sempre como item novo **no início** de `var EXTRA=[`):
-   - Notícia do Flamengo: `teams:['flamengo']` (aparece na página do Flamengo **e** na aba Futebol).
-     Se envolver outro clube do site, inclua o slug dele também: `teams:['flamengo','palmeiras']`.
-   - Notícia de outro clube do site: `teams:['slug-do-clube']`.
-   - Notícia de futebol sem clube do site (Seleção, CBF, arbitragem, futebol internacional com brasileiros):
-     `teams:[], sport:'futebol'` (aparece na aba Futebol).
-   - Campos: `id` único (ex.: `'fla-2609-1430-lesao-arrascaeta'`), `k` (editoria · assunto, ex.: `'Flamengo · Departamento médico'`),
-     `t` (título), `d` (linha fina), `date:'dd/mm'`, `body:[parágrafos]`, `src:[[veículo,url],...]`.
-   - Se for a notícia mais forte do momento, coloque também no letreiro "Plantão" (`ticker-track`).
+   (procure no `index.html` por palavras-chave, títulos e URLs de fonte, e veja `git log`).
+   Boato sem fonte séria não entra. **Se não houver nada bom, não altere nada e não faça commit.**
+4. Onde entra: item novo **no topo** de `var PLANTAO=[` (a mais nova sempre em cima):
+   ```js
+   {id:'2609-1430-fla-lesao-arrascaeta', sp:'futebol', quem:['flamengo'],
+    k:'Flamengo · Departamento médico', t:'Título informativo', d:'Linha fina com o dado principal',
+    date:'26/09', hora:'14h30', body:['parágrafo 1','parágrafo 2', ...], src:[['ge','https://...'],['Lance','https://...']]},
+   ```
+   - `sp`: `futebol`, `volei`, `basquete`, `lutas`, `motor` ou `tenis`.
+   - `quem`: slugs de quem a notícia trata. A matéria aparece na página de **cada um** deles **e** na aba do esporte.
+     Ex.: clássico `quem:['flamengo','fluminense']`; luta `quem:['alexandre-pantoja']`.
+   - Notícia do esporte que não é de nenhum clube/atleta do site (Seleção, CBF, arbitragem, outro evento): `quem:[]`
+     → aparece só na aba do esporte.
+   - `id` nunca pode repetir. Se for a notícia mais forte do momento, ponha também no letreiro "Plantão" (`ticker-track`).
+   - A contagem de notícias de cada clube/equipe/atleta sobe sozinha.
 5. **Padrão da matéria (obrigatório):** nada genérico. Mínimo de **5 parágrafos** com fatos concretos:
-   o que aconteceu, quando e onde; nomes completos; números (valores, prazos, minutos, estatísticas da temporada);
-   declarações atribuídas a quem falou (com o veículo que publicou); contexto (tabela, sequência de jogos, histórico recente);
-   o que acontece a seguir (próximo jogo, prazo, decisão pendente). Pelo menos **2 fontes** diferentes em `src`.
-   Proibido: frases vazias ("promete agitar", "a torcida está ansiosa"), opinião sem base, repetir a linha fina no corpo.
+   o que aconteceu, quando e onde; nomes completos; números (placar, valores, prazos, minutos, estatísticas da temporada,
+   cartel do lutador, posição no campeonato); declarações atribuídas a quem falou (com o veículo que publicou);
+   contexto (tabela, sequência, histórico do confronto); e o que acontece a seguir (próximo jogo, prazo, decisão pendente).
+   Pelo menos **2 fontes** diferentes em `src`. Proibido: frases vazias ("promete agitar", "a torcida está ansiosa"),
+   opinião sem base, repetir a linha fina no corpo, texto que serviria para qualquer time.
 6. `python3 tools/check.py` → só com `OK` faça commit (`Plantão DD/MM HHh: <assunto>`) e push.
+   Pode publicar mais de uma matéria no mesmo plantão, se houver mais de um assunto realmente relevante.

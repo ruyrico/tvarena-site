@@ -2150,12 +2150,37 @@ abbr.br{text-decoration:none;font-size:11px;font-weight:800;color:#1B7340}
   }
   buildExtras();
 
+  /* ---------- PLANTÃO: notícias novas de qualquer clube, equipe, atleta ou lutador ----------
+     Cada item: {id:'unico', sp:'futebol'|'volei'|'basquete'|'lutas'|'motor'|'tenis', quem:[slugs], k, t, d, date:'dd/mm', hora:'14h30', body:[...], src:[[veiculo,url],...]}
+     quem: slugs de TEAMS (futebol) ou de EQ[sp] (demais). quem:[] = notícia geral do esporte.
+     A MAIS NOVA FICA NO TOPO da lista. */
+  var PLANTAO=[
+  ];
+  (function(){
+    var ok=function(sp,sl){return sp==='futebol'?!!TEAM[sl]:!!(EQ[sp]&&EQ[sp].some(function(x){return x[0]===sl;}));};
+    PLANTAO.slice().reverse().forEach(function(p){
+      if(!CATS[p.sp])return;
+      var pub=p.date+(p.hora?', '+p.hora:''),first=null;
+      (p.quem||[]).filter(function(sl){return ok(p.sp,sl);}).forEach(function(sl){
+        var key=p.sp+'-'+sl+'-p-'+p.id,a={k:p.k,t:p.t,d:p.d,date:p.date,body:p.body,src:p.src,pub:pub,href:'#an-'+key,sp:p.sp,slug:sl};
+        AN[key]=a;(AN_BY[p.sp+':'+sl]=AN_BY[p.sp+':'+sl]||[]).unshift(a);if(!first)first=a;
+      });
+      var href;
+      if(first)href=first.href;
+      else{EXTRA.push({id:'p-'+p.id,teams:[],sport:p.sp,k:p.k,t:p.t,d:p.d,date:p.date,body:p.body,src:p.src});href='#nota-p-'+p.id;
+        INDEX.push({it:{art:p.sp,t:p.t,date:p.date,href:href},cat:p.k,text:norm(p.t+' '+p.d+' '+p.k)});}
+      var attrs=p.sp==='futebol'&&first?' data-art="futebol" data-h="'+first.slug+'" data-a="'+((p.quem[1]&&ok('futebol',p.quem[1]))?p.quem[1]:first.slug)+'" data-seed="'+(hashId(p.id)%9)+'"':' data-art="'+p.sp+'" data-seed="'+(hashId(p.id)%9)+'"';
+      CATS[p.sp].items.unshift({attrs:attrs,art:p.sp,k:p.k,t:p.t,d:p.d,date:p.date,href:href});
+    });
+  })();
+  window.TVA={TEAMS:TEAMS,TEAM:TEAM,EQ:EQ};
+
   Object.keys(AN).forEach(function(k){var a=AN[k];INDEX.push({it:{art:a.sp,t:a.t,date:a.date,href:a.href},cat:a.k,text:norm(a.t+' '+a.d+' '+a.k)});});
   function renderAn(key){
     var a=AN[key]; if(!a){location.hash='times';return;}
     var back=a.sp==='futebol'?'#time-'+a.slug:'#eq-'+a.sp+'-'+a.slug,name=a.sp==='futebol'?TEAM[a.slug].name:eqName(a.sp,a.slug);
-    teamsRoot.innerHTML='<article class="article"><div class="crumbs rise"><a href="'+back+'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>'+esc(name)+'</a><span>/</span><span>Análise</span></div>'+
-      '<header class="art-head"><span class="kicker rise d1">'+esc(a.k)+'</span><h1 class="display rise d2">'+esc(a.t)+'</h1><p class="dek rise d3">'+esc(a.d)+'</p><div class="meta rise d4"><span>Por <b>Redação TV Arena</b></span><span>Levantamento com dados verificados</span></div></header>'+
+    teamsRoot.innerHTML='<article class="article"><div class="crumbs rise"><a href="'+back+'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>'+esc(name)+'</a><span>/</span><span>'+(a.pub?'Notícia':'Análise')+'</span></div>'+
+      '<header class="art-head"><span class="kicker rise d1">'+esc(a.k)+'</span><h1 class="display rise d2">'+esc(a.t)+'</h1><p class="dek rise d3">'+esc(a.d)+'</p><div class="meta rise d4"><span>Por <b>Redação TV Arena</b></span><span>'+(a.pub?esc(a.pub):'Levantamento com dados verificados')+'</span></div></header>'+
       '<figure class="art-photo rise d4"><span class="frame wipe"><span class="ph" data-art="'+a.sp+'" data-seed="'+(hashId(key)%9)+'"'+(a.sp==='futebol'?' data-h="'+a.slug+'" data-a="'+a.slug+'"':'')+'></span></span><figcaption>Arte: TV Arena Esportes.</figcaption></figure>'+
       '<div class="art-grid"><div class="body no-drop">'+a.body.map(function(c){return '<p>'+esc(c)+'</p>';}).join('')+sourcesNote(a.src)+'</div>'+
       '<aside class="card-box"><h3>Mais sobre '+esc(name)+'</h3>'+(AN_BY[a.sp+':'+a.slug]||[]).filter(function(x){return x!==a;}).map(function(x){return '<a class="team-chip" href="'+x.href+'"><span>'+esc(x.t)+'</span></a>';}).join('')+'<a class="btn" href="'+back+'">Ver todas as notícias</a></aside></div></article>';
