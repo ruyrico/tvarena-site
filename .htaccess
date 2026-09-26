@@ -1,0 +1,16 @@
+# TV Arena Esportes
+DirectoryIndex index.html index.php
+AddDefaultCharset UTF-8
+
+# arquivos internos do repositório não ficam públicos
+<FilesMatch "\.(md|py|json|txt)$">
+  Require all denied
+</FilesMatch>
+RedirectMatch 404 ^/(tools|data|\.git)(/|$)
+
+# o navegador sempre busca a versão nova da página
+<IfModule mod_headers.c>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
