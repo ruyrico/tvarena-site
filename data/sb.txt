@@ -1,0 +1,329 @@
+1|21/03|Vila Nova 2 x 2 CRB
+1|21/03|Ceará 1 x 1 São Bernardo
+1|21/03|Operário-PR 1 x 0 Atlético-GO
+1|21/03|Botafogo-SP 4 x 0 Fortaleza
+1|21/03|Cuiabá 0 x 0 Sport
+1|22/03|Avaí 2 x 0 Juventude
+1|22/03|Náutico 0 x 1 Criciúma
+1|22/03|Athletic 2 x 1 Ponte Preta
+1|22/03|Goiás 3 x 1 América-MG
+1|22/03|Novorizontino 1 x 3 Londrina
+2|31/03|Juventude 0 x 0 Novorizontino
+2|31/03|Fortaleza 0 x 0 Cuiabá
+2|01/04|América-MG 1 x 2 Botafogo-SP
+2|01/04|Londrina 2 x 2 Goiás
+2|01/04|Atlético-GO 1 x 2 Náutico
+2|01/04|Sport 1 x 1 Vila Nova
+2|01/04|Ponte Preta 1 x 1 Ceará
+2|01/04|Criciúma 1 x 1 Athletic
+2|01/04|CRB 0 x 1 Avaí
+2|02/04|São Bernardo 1 x 2 Operário-PR
+3|04/04|Fortaleza 2 x 1 Juventude
+3|04/04|Náutico 1 x 0 Ponte Preta
+3|04/04|Cuiabá 0 x 2 Ceará
+3|04/04|Vila Nova 2 x 1 Atlético-GO
+3|04/04|Londrina 1 x 2 Sport
+3|05/04|Avaí 0 x 0 Operário-PR
+3|05/04|Novorizontino 1 x 1 CRB
+3|05/04|Athletic 1 x 1 América-MG
+3|05/04|Botafogo-SP 1 x 2 São Bernardo
+3|06/04|Goiás 1 x 0 Criciúma
+4|10/04|Criciúma 1 x 0 Botafogo-SP
+4|11/04|Juventude 2 x 0 Goiás
+4|11/04|Ponte Preta 0 x 1 Vila Nova
+4|11/04|Sport 2 x 2 Avaí
+4|11/04|Ceará 1 x 0 Náutico
+4|12/04|São Bernardo 0 x 1 Fortaleza
+4|12/04|América-MG 0 x 3 Novorizontino
+4|12/04|Operário-PR 0 x 0 Cuiabá
+4|12/04|CRB 2 x 3 Athletic
+4|12/04|Atlético-GO 2 x 1 Londrina
+5|18/04|América-MG 0 x 0 Sport
+5|18/04|Náutico 0 x 3 São Bernardo
+5|18/04|Vila Nova 2 x 1 Operário-PR
+5|18/04|Avaí 1 x 2 Ponte Preta
+5|18/04|CRB 0 x 1 Juventude
+5|19/04|Botafogo-SP 1 x 1 Atlético-GO
+5|19/04|Londrina 0 x 0 Ceará
+5|19/04|Goiás 0 x 2 Cuiabá
+5|19/04|Novorizontino 2 x 1 Athletic
+5|19/04|Fortaleza 3 x 2 Criciúma
+6|22/04|Cuiabá 1 x 1 Botafogo-SP
+6|24/04|Ponte Preta 1 x 0 América-MG
+6|25/04|Sport 1 x 0 Novorizontino
+6|25/04|Juventude 1 x 0 Londrina
+6|26/04|São Bernardo 1 x 0 Goiás
+6|26/04|Operário-PR 0 x 0 Fortaleza
+6|26/04|Ceará 3 x 3 Vila Nova
+6|26/04|Atlético-GO 2 x 1 Avaí
+6|26/04|Criciúma 3 x 1 CRB
+6|27/04|Athletic 0 x 1 Náutico
+7|02/05|Botafogo-SP 1 x 1 Náutico
+7|02/05|Cuiabá 1 x 1 Criciúma
+7|02/05|Fortaleza 4 x 1 Goiás
+7|03/05|São Bernardo 3 x 0 Ponte Preta
+7|03/05|Operário-PR 3 x 0 Londrina
+7|03/05|Sport 2 x 0 Ceará
+7|03/05|Atlético-GO 0 x 0 Juventude
+7|03/05|América-MG 1 x 2 CRB
+7|03/05|Avaí 3 x 3 Novorizontino
+7|04/05|Vila Nova 1 x 1 Athletic
+8|09/05|Goiás 1 x 0 Vila Nova
+8|09/05|Athletic 0 x 0 Cuiabá
+8|09/05|Ponte Preta 1 x 3 Sport
+8|09/05|Ceará 0 x 1 Atlético-GO
+8|09/05|CRB 3 x 0 Operário-PR
+8|09/05|Juventude 0 x 0 Criciúma
+8|10/05|Náutico 4 x 0 América-MG
+8|10/05|Avaí 0 x 0 Fortaleza
+8|10/05|Novorizontino 1 x 0 Botafogo-SP
+8|12/05|Londrina 1 x 3 São Bernardo
+9|16/05|São Bernardo 1 x 1 América-MG
+9|16/05|Operário-PR 2 x 6 Náutico
+9|16/05|Goiás 1 x 0 Botafogo-SP
+9|16/05|Cuiabá 0 x 0 Novorizontino
+9|17/05|Athletic 1 x 1 Juventude
+9|17/05|Vila Nova 2 x 0 Avaí
+9|17/05|Ceará 2 x 1 Fortaleza
+9|17/05|Criciúma 1 x 1 Atlético-GO
+9|17/05|Sport 1 x 2 CRB
+9|18/05|Ponte Preta 1 x 4 Londrina
+10|22/05|Náutico 1 x 0 Cuiabá
+10|23/05|Novorizontino 2 x 1 Ceará
+10|23/05|Fortaleza 3 x 0 Londrina
+10|23/05|Juventude 0 x 1 Sport
+10|24/05|Atlético-GO 0 x 1 São Bernardo
+10|24/05|CRB 4 x 2 Ponte Preta
+10|24/05|América-MG 1 x 2 Vila Nova
+10|24/05|Avaí 0 x 2 Goiás
+10|24/05|Operário-PR 1 x 1 Criciúma
+10|25/05|Botafogo-SP 1 x 2 Athletic
+11|29/05|Juventude 3 x 0 América-MG
+11|30/05|Atlético-GO 1 x 1 Goiás
+11|30/05|Avaí 1 x 2 Criciúma
+11|30/05|Athletic 1 x 0 Fortaleza
+11|30/05|Sport 2 x 0 Náutico
+11|31/05|São Bernardo 1 x 1 Novorizontino
+11|31/05|Londrina 0 x 1 Vila Nova
+11|31/05|Ceará 1 x 2 Operário-PR
+11|31/05|Cuiabá 2 x 0 CRB
+11|01/06|Ponte Preta 0 x 0 Botafogo-SP
+12|05/06|Operário-PR 2 x 1 Juventude
+12|06/06|Criciúma 1 x 0 Londrina
+12|07/06|CRB 2 x 3 São Bernardo
+12|08/06|América-MG 1 x 2 Atlético-GO
+12|08/06|Vila Nova 1 x 0 Botafogo-SP
+12|09/06|Ponte Preta 1 x 2 Cuiabá
+12|09/06|Náutico 0 x 1 Fortaleza
+12|10/06|Ceará 2 x 1 Avaí
+12|10/06|Goiás 0 x 4 Novorizontino
+12|10/06|Sport 1 x 1 Athletic
+13|12/06|Atlético-GO 3 x 3 CRB
+13|14/06|São Bernardo 0 x 0 Sport
+13|14/06|Juventude 3 x 0 Ponte Preta
+13|14/06|Athletic 1 x 1 Goiás
+13|14/06|Cuiabá 1 x 0 Vila Nova
+13|14/06|Botafogo-SP 2 x 1 Operário-PR
+13|14/06|Novorizontino 2 x 2 Náutico
+13|15/06|Londrina 3 x 2 Avaí
+13|15/06|Criciúma 1 x 1 Ceará
+13|16/06|Fortaleza 0 x 3 América-MG
+14|18/06|Sport 1 x 1 Atlético-GO
+14|20/06|Londrina 2 x 0 Athletic
+14|20/06|Ceará 0 x 1 Botafogo-SP
+14|20/06|Vila Nova 4 x 3 Náutico
+14|21/06|Avaí 1 x 0 Cuiabá
+14|21/06|CRB 1 x 1 Fortaleza
+14|21/06|São Bernardo 0 x 1 Juventude
+14|21/06|Goiás 0 x 3 Operário-PR
+14|22/06|Ponte Preta 0 x 2 Novorizontino
+14|23/06|América-MG 0 x 1 Criciúma
+15|25/06|Cuiabá 2 x 2 Londrina
+15|26/06|Novorizontino 2 x 1 Vila Nova
+15|27/06|Operário-PR 1 x 0 América-MG
+15|27/06|Criciúma 1 x 0 São Bernardo
+15|28/06|Athletic 1 x 0 Avaí
+15|28/06|Atlético-GO 2 x 0 Ponte Preta
+15|28/06|Juventude 2 x 0 Ceará
+15|28/06|Fortaleza 2 x 1 Sport
+15|28/06|Náutico 0 x 1 Goiás
+15|30/06|Botafogo-SP 0 x 1 CRB
+16|02/07|Cuiabá 1 x 0 América-MG
+16|02/07|Fortaleza 2 x 0 Ponte Preta
+16|04/07|Novorizontino 3 x 0 Atlético-GO
+16|04/07|Londrina 5 x 0 CRB
+16|04/07|Criciúma 1 x 0 Sport
+16|04/07|Goiás 2 x 0 Ceará
+16|05/07|Náutico 0 x 0 Juventude
+16|06/07|Botafogo-SP 3 x 1 Avaí
+16|06/07|Vila Nova 2 x 1 São Bernardo
+16|07/07|Athletic 0 x 1 Operário-PR
+17|08/07|Ponte Preta 1 x 2 Criciúma
+17|10/07|Juventude 1 x 0 Vila Nova
+17|10/07|Sport 3 x 3 Botafogo-SP
+17|12/07|Operário-PR 2 x 1 Novorizontino
+17|12/07|São Bernardo 2 x 2 Cuiabá
+17|12/07|Avaí 2 x 0 Náutico
+17|12/07|Atlético-GO 1 x 0 Fortaleza
+17|12/07|CRB 2 x 2 Goiás
+17|13/07|América-MG 1 x 1 Londrina
+17|13/07|Ceará 0 x 0 Athletic
+18|16/07|CRB 2 x 1 Náutico
+18|17/07|São Bernardo 1 x 1 Avaí
+18|17/07|América-MG 1 x 1 Ceará
+18|17/07|Juventude 2 x 0 Cuiabá
+18|17/07|Londrina 0 x 0 Botafogo-SP
+18|17/07|Fortaleza 1 x 0 Novorizontino
+18|18/07|Ponte Preta 1 x 2 Goiás
+18|18/07|Criciúma 2 x 0 Vila Nova
+18|18/07|Sport 2 x 2 Operário-PR
+18|18/07|Atlético-GO 0 x 0 Athletic
+19|21/07|Novorizontino 0 x 1 Criciúma
+19|21/07|Avaí 2 x 1 América-MG
+19|21/07|Vila Nova 2 x 1 Fortaleza
+19|22/07|Operário-PR 3 x 2 Ponte Preta
+19|22/07|Ceará 0 x 1 CRB
+19|22/07|Goiás 1 x 1 Sport
+19|22/07|Náutico 2 x 1 Londrina
+19|23/07|Athletic 2 x 1 São Bernardo
+19|23/07|Cuiabá 0 x 1 Atlético-GO
+19|23/07|Botafogo-SP 4 x 2 Juventude
+20|26/07|São Bernardo 3 x 4 Ceará
+20|26/07|Criciúma 0 x 0 Náutico
+20|26/07|América-MG 1 x 0 Goiás
+20|26/07|Londrina 1 x 4 Novorizontino
+20|27/07|Atlético-GO 3 x 1 Operário-PR
+20|27/07|Sport 1 x 1 Cuiabá
+20|27/07|CRB 2 x 0 Vila Nova
+20|28/07|Ponte Preta 1 x 1 Athletic
+20|28/07|Juventude 1 x 0 Avaí
+20|28/07|Fortaleza 1 x 0 Botafogo-SP
+21|07/08|Operário-PR 1 x 3 São Bernardo
+21|07/08|Ceará 2 x 0 Ponte Preta
+21|08/08|Vila Nova 0 x 1 Sport
+21|08/08|Botafogo-SP 2 x 1 América-MG
+21|09/08|Athletic 2 x 0 Criciúma
+21|09/08|Novorizontino 0 x 1 Juventude
+21|09/08|Náutico 1 x 1 Atlético-GO
+21|09/08|Cuiabá 1 x 1 Fortaleza
+21|10/08|Goiás 1 x 0 Londrina
+21|11/08|Avaí 0 x 1 CRB
+22|14/08|Ponte Preta 1 x 1 Náutico
+22|14/08|São Bernardo 0 x 1 Botafogo-SP
+22|14/08|Sport 2 x 1 Londrina
+22|15/08|Ceará 1 x 3 Cuiabá
+22|15/08|Atlético-GO 0 x 2 Vila Nova
+22|15/08|Criciúma 1 x 0 Goiás
+22|15/08|Juventude 0 x 0 Fortaleza
+22|16/08|Operário-PR 1 x 2 Avaí
+22|16/08|América-MG 1 x 3 Athletic
+22|16/08|CRB 0 x 0 Novorizontino
+23|18/08|Londrina 0 x 0 Atlético-GO
+23|18/08|Náutico 1 x 0 Ceará
+23|18/08|Goiás 0 x 1 Juventude
+23|19/08|Fortaleza 1 x 1 São Bernardo
+23|19/08|Avaí 2 x 1 Sport
+23|19/08|Cuiabá 1 x 0 Operário-PR
+23|19/08|Vila Nova 6 x 0 Ponte Preta
+23|19/08|Botafogo-SP 1 x 1 Criciúma
+23|20/08|Athletic 0 x 2 CRB
+23|20/08|Novorizontino 3 x 0 América-MG
+24|22/08|Ceará 2 x 1 Londrina
+24|22/08|Cuiabá 1 x 1 Goiás
+24|23/08|Ponte Preta 0 x 2 Avaí
+24|23/08|São Bernardo 1 x 1 Náutico
+24|23/08|Operário-PR 0 x 0 Vila Nova
+24|23/08|Criciúma 0 x 2 Fortaleza
+24|24/08|Athletic 1 x 4 Novorizontino
+24|24/08|Sport 3 x 0 América-MG
+24|25/08|Atlético-GO 3 x 0 Botafogo-SP
+24|25/08|Juventude 2 x 1 CRB
+25|28/08|Goiás 2 x 1 São Bernardo
+25|28/08|Novorizontino 2 x 1 Sport
+25|28/08|Náutico 2 x 1 Athletic
+25|29/08|Botafogo-SP 1 x 2 Cuiabá
+25|30/08|América-MG 2 x 0 Ponte Preta
+25|30/08|Avaí 0 x 1 Atlético-GO
+25|30/08|CRB 2 x 1 Criciúma
+25|30/08|Vila Nova 2 x 0 Ceará
+25|31/08|Fortaleza 1 x 1 Operário-PR
+25|01/09|Londrina 0 x 0 Juventude
+26|03/09|Náutico 1 x 0 Botafogo-SP
+26|04/09|Criciúma 2 x 0 Cuiabá
+26|04/09|Athletic 5 x 0 Vila Nova
+26|04/09|CRB 3 x 1 América-MG
+26|05/09|Novorizontino 3 x 1 Avaí
+26|05/09|Goiás 0 x 1 Fortaleza
+26|05/09|Juventude 2 x 2 Atlético-GO
+26|05/09|Ceará 2 x 1 Sport
+26|06/09|Londrina 1 x 2 Operário-PR
+26|06/09|Ponte Preta 0 x 2 São Bernardo
+27|08/09|Cuiabá 3 x 0 Athletic
+27|08/09|Criciúma 0 x 2 Juventude
+27|09/09|Botafogo-SP 1 x 3 Novorizontino
+27|09/09|Fortaleza 1 x 0 Avaí
+27|09/09|América-MG 2 x 1 Náutico
+27|09/09|Operário-PR 3 x 0 CRB
+27|09/09|Atlético-GO 2 x 1 Ceará
+27|10/09|São Bernardo 1 x 2 Londrina
+27|10/09|Vila Nova 2 x 0 Goiás
+27|10/09|Sport 2 x 0 Ponte Preta
+28|13/09|Atlético-GO 4 x 0 Criciúma
+28|13/09|Juventude 0 x 2 Athletic
+28|13/09|Novorizontino 1 x 1 Cuiabá
+28|13/09|Fortaleza 1 x 1 Ceará
+28|14/09|Botafogo-SP 1 x 3 Goiás
+28|14/09|América-MG 0 x 2 São Bernardo
+28|14/09|Avaí 1 x 1 Vila Nova
+28|15/09|Londrina 6 x 0 Ponte Preta
+28|15/09|Náutico 3 x 3 Operário-PR
+28|15/09|CRB 2 x 1 Sport
+29|18/09|Vila Nova 1 x 0 América-MG
+29|18/09|Ceará 2 x 1 Novorizontino
+29|18/09|São Bernardo 1 x 0 Atlético-GO
+29|19/09|Sport 2 x 1 Juventude
+29|19/09|Athletic 1 x 1 Botafogo-SP
+29|20/09|Ponte Preta 1 x 0 CRB
+29|20/09|Goiás 2 x 1 Avaí
+29|20/09|Londrina 1 x 2 Fortaleza
+29|21/09|Cuiabá 3 x 0 Náutico
+29|22/09|Criciúma 0 x 2 Operário-PR
+30|25/09|Novorizontino vs São Bernardo
+30|25/09|Vila Nova vs Londrina
+30|26/09|Operário-PR vs Ceará
+30|26/09|Náutico vs Sport
+30|26/09|Goiás vs Atlético-GO
+30|27/09|Criciúma vs Avaí
+30|27/09|CRB vs Cuiabá
+30|27/09|Fortaleza vs Athletic
+30|28/09|América-MG vs Juventude
+30|29/09|Botafogo-SP vs Ponte Preta
+31|01/10|Athletic vs Sport
+31|01/10|Novorizontino vs Goiás
+31|02/10|São Bernardo vs CRB
+31|02/10|Londrina vs Criciúma
+31|02/10|Juventude vs Operário-PR
+31|02/10|Fortaleza vs Náutico
+31|03/10|Avaí vs Ceará
+31|03/10|Atlético-GO vs América-MG
+31|03/10|Cuiabá vs Ponte Preta
+31|03/10|Botafogo-SP vs Vila Nova
+32|06/10|Sport vs São Bernardo
+32|06/10|Goiás vs Athletic
+32|06/10|Ponte Preta vs Juventude
+32|07/10|Operário-PR vs Botafogo-SP
+32|07/10|Avaí vs Londrina
+32|07/10|América-MG vs Fortaleza
+32|07/10|CRB vs Atlético-GO
+32|07/10|Vila Nova vs Cuiabá
+32|08/10|Ceará vs Criciúma
+32|08/10|Náutico vs Novorizontino
+33|11/10|Juventude vs São Bernardo
+33|11/10|Atlético-GO vs Sport
+33|11/10|Náutico vs Vila Nova
+33|11/10|Operário-PR vs Goiás
+33|11/10|Cuiabá vs Avaí
+33|12/10|Novorizontino vs Ponte Preta
+33|12/10|Criciúma vs América-MG
+33|12/10|Fortaleza vs CRB
+33|12/10|Botafogo-SP vs Ceará

@@ -1,0 +1,380 @@
+1|28/01|Atlético-MG 2 x 2 Palmeiras
+1|28/01|Internacional 0 x 1 Athletico-PR
+1|28/01|Coritiba 0 x 1 Bragantino
+1|28/01|Vitória 2 x 0 Remo
+1|28/01|Fluminense 2 x 1 Grêmio
+1|28/01|Corinthians 1 x 2 Bahia
+1|28/01|Chapecoense 4 x 2 Santos
+1|28/01|São Paulo 2 x 1 Flamengo
+1|29/01|Mirassol 2 x 1 Vasco
+1|29/01|Botafogo 4 x 0 Cruzeiro
+2|04/02|Flamengo 1 x 1 Internacional
+2|04/02|Bragantino 1 x 0 Atlético-MG
+2|04/02|Santos 1 x 1 São Paulo
+2|04/02|Remo 2 x 2 Mirassol
+2|04/02|Palmeiras 5 x 1 Vitória
+2|04/02|Grêmio 5 x 3 Botafogo
+2|05/02|Bahia 1 x 1 Fluminense
+2|05/02|Vasco 1 x 1 Chapecoense
+2|05/02|Cruzeiro 1 x 2 Coritiba
+2|19/02|Athletico-PR 0 x 1 Corinthians
+3|10/02|Vitória 1 x 2 Flamengo
+3|11/02|Mirassol 2 x 2 Cruzeiro
+3|11/02|Chapecoense 3 x 3 Coritiba
+3|11/02|Atlético-MG 3 x 3 Remo
+3|11/02|Vasco 0 x 1 Bahia
+3|11/02|São Paulo 2 x 0 Grêmio
+3|12/02|Athletico-PR 2 x 1 Santos
+3|12/02|Fluminense 1 x 0 Botafogo
+3|12/02|Corinthians 2 x 0 Bragantino
+3|12/02|Internacional 1 x 3 Palmeiras
+4|25/02|Bragantino 1 x 1 Athletico-PR
+4|25/02|Remo 1 x 1 Internacional
+4|25/02|Coritiba 0 x 1 São Paulo
+4|25/02|Cruzeiro 1 x 1 Corinthians
+4|25/02|Palmeiras 2 x 1 Fluminense
+4|25/02|Grêmio 2 x 1 Atlético-MG
+4|26/02|Santos 2 x 1 Vasco
+4|17/07|Bahia 2 x 0 Chapecoense
+4|23/07|Botafogo 0 x 0 Vitória
+4|02/09|Flamengo 2 x 0 Mirassol
+5|10/03|Mirassol 2 x 2 Santos
+5|11/03|Atlético-MG 1 x 0 Internacional
+5|11/03|Bahia 1 x 1 Vitória
+5|11/03|Flamengo 2 x 0 Cruzeiro
+5|11/03|Corinthians 0 x 2 Coritiba
+5|12/03|Remo 0 x 2 Fluminense
+5|12/03|Vasco 2 x 1 Palmeiras
+5|12/03|São Paulo 2 x 0 Chapecoense
+5|12/03|Grêmio 1 x 1 Bragantino
+5|29/03|Athletico-PR 4 x 1 Botafogo
+6|14/03|Vitória 2 x 0 Atlético-MG
+6|14/03|Botafogo 0 x 3 Flamengo
+6|15/03|Fluminense 3 x 2 Athletico-PR
+6|15/03|Santos 1 x 1 Corinthians
+6|15/03|Internacional 0 x 1 Bahia
+6|15/03|Palmeiras 1 x 0 Mirassol
+6|15/03|Coritiba 1 x 0 Remo
+6|15/03|Bragantino 1 x 2 São Paulo
+6|15/03|Cruzeiro 3 x 3 Vasco
+6|16/03|Chapecoense 1 x 1 Grêmio
+7|18/03|Palmeiras 2 x 1 Botafogo
+7|18/03|Bahia 2 x 0 Bragantino
+7|18/03|Athletico-PR 2 x 1 Cruzeiro
+7|18/03|Mirassol 0 x 1 Coritiba
+7|18/03|Atlético-MG 1 x 0 São Paulo
+7|18/03|Vasco 3 x 2 Fluminense
+7|18/03|Santos 1 x 2 Internacional
+7|19/03|Grêmio 2 x 0 Vitória
+7|19/03|Flamengo 3 x 0 Remo
+7|19/03|Chapecoense 0 x 0 Corinthians
+8|21/03|Bragantino 1 x 2 Botafogo
+8|21/03|Fluminense 1 x 0 Atlético-MG
+8|21/03|São Paulo 0 x 1 Palmeiras
+8|22/03|Vasco 2 x 1 Grêmio
+8|22/03|Cruzeiro 0 x 0 Santos
+8|22/03|Athletico-PR 2 x 0 Coritiba
+8|22/03|Remo 4 x 1 Bahia
+8|22/03|Internacional 2 x 0 Chapecoense
+8|22/03|Vitória 1 x 0 Mirassol
+8|22/03|Corinthians 1 x 1 Flamengo
+9|01/04|Botafogo 3 x 2 Mirassol
+9|01/04|Internacional 1 x 1 São Paulo
+9|01/04|Cruzeiro 3 x 0 Vitória
+9|01/04|Bahia 3 x 0 Athletico-PR
+9|01/04|Coritiba 1 x 1 Vasco
+9|01/04|Fluminense 3 x 1 Corinthians
+9|02/04|Santos 2 x 0 Remo
+9|02/04|Chapecoense 0 x 4 Atlético-MG
+9|02/04|Palmeiras 2 x 1 Grêmio
+9|02/04|Bragantino 3 x 0 Flamengo
+10|04/04|São Paulo 4 x 1 Cruzeiro
+10|04/04|Coritiba 1 x 1 Fluminense
+10|04/04|Vasco 1 x 2 Botafogo
+10|05/04|Chapecoense 1 x 1 Vitória
+10|05/04|Flamengo 3 x 1 Santos
+10|05/04|Atlético-MG 2 x 1 Athletico-PR
+10|05/04|Corinthians 0 x 1 Internacional
+10|05/04|Bahia 1 x 2 Palmeiras
+10|05/04|Mirassol 0 x 1 Bragantino
+10|05/04|Grêmio 0 x 0 Remo
+11|11/04|Vitória 2 x 0 São Paulo
+11|11/04|Remo 1 x 1 Vasco
+11|11/04|Mirassol 1 x 2 Bahia
+11|11/04|Santos 1 x 0 Atlético-MG
+11|11/04|Internacional 0 x 0 Grêmio
+11|12/04|Athletico-PR 2 x 0 Chapecoense
+11|12/04|Botafogo 2 x 2 Coritiba
+11|12/04|Fluminense 1 x 2 Flamengo
+11|12/04|Corinthians 0 x 0 Palmeiras
+11|12/04|Cruzeiro 2 x 1 Bragantino
+12|18/04|Vasco 2 x 1 São Paulo
+12|18/04|Chapecoense 1 x 4 Botafogo
+12|18/04|Vitória 0 x 0 Corinthians
+12|18/04|Cruzeiro 2 x 0 Grêmio
+12|19/04|Internacional 1 x 2 Mirassol
+12|19/04|Santos 2 x 3 Fluminense
+12|19/04|Coritiba 2 x 0 Atlético-MG
+12|19/04|Palmeiras 1 x 0 Athletico-PR
+12|19/04|Bragantino 4 x 2 Remo
+12|19/04|Flamengo 2 x 0 Bahia
+13|25/04|Botafogo 2 x 2 Internacional
+13|25/04|Bahia 2 x 2 Santos
+13|25/04|Remo 0 x 1 Cruzeiro
+13|25/04|São Paulo 1 x 0 Mirassol
+13|26/04|Corinthians 1 x 0 Vasco
+13|26/04|Grêmio 1 x 0 Coritiba
+13|26/04|Bragantino 0 x 1 Palmeiras
+13|26/04|Athletico-PR 3 x 1 Vitória
+13|26/04|Fluminense 2 x 1 Chapecoense
+13|26/04|Atlético-MG 0 x 4 Flamengo
+14|02/05|Botafogo 1 x 2 Remo
+14|02/05|Palmeiras 1 x 1 Santos
+14|02/05|Vitória 4 x 1 Coritiba
+14|02/05|Athletico-PR 0 x 0 Grêmio
+14|02/05|Cruzeiro 1 x 3 Atlético-MG
+14|03/05|Flamengo 2 x 2 Vasco
+14|03/05|São Paulo 2 x 2 Bahia
+14|03/05|Internacional 2 x 0 Fluminense
+14|03/05|Chapecoense 1 x 2 Bragantino
+14|03/05|Mirassol 2 x 1 Corinthians
+15|09/05|Coritiba 2 x 2 Internacional
+15|09/05|Fluminense 2 x 2 Vitória
+15|09/05|Bahia 1 x 2 Cruzeiro
+15|10/05|Atlético-MG 1 x 1 Botafogo
+15|10/05|Remo 1 x 1 Palmeiras
+15|10/05|Santos 2 x 0 Bragantino
+15|10/05|Corinthians 3 x 2 São Paulo
+15|10/05|Mirassol 1 x 1 Chapecoense
+15|10/05|Grêmio 0 x 1 Flamengo
+15|10/05|Vasco 1 x 0 Athletico-PR
+16|16/05|Atlético-MG 3 x 1 Mirassol
+16|16/05|Internacional 4 x 1 Vasco
+16|16/05|Fluminense 2 x 1 São Paulo
+16|16/05|Palmeiras 1 x 1 Cruzeiro
+16|17/05|Santos 0 x 3 Coritiba
+16|17/05|Botafogo 3 x 1 Corinthians
+16|17/05|Bahia 1 x 1 Grêmio
+16|17/05|Bragantino 2 x 0 Vitória
+16|17/05|Chapecoense 2 x 3 Remo
+16|17/05|Athletico-PR 1 x 1 Flamengo
+17|23/05|São Paulo 1 x 1 Botafogo
+17|23/05|Vitória 2 x 0 Internacional
+17|23/05|Mirassol 1 x 0 Fluminense
+17|23/05|Grêmio 3 x 2 Santos
+17|23/05|Flamengo 0 x 3 Palmeiras
+17|24/05|Cruzeiro 2 x 1 Chapecoense
+17|24/05|Remo 1 x 2 Athletico-PR
+17|24/05|Corinthians 1 x 0 Atlético-MG
+17|24/05|Vasco 0 x 3 Bragantino
+17|25/05|Coritiba 3 x 2 Bahia
+18|30/05|Flamengo 3 x 0 Coritiba
+18|30/05|Athletico-PR 1 x 0 Mirassol
+18|30/05|Grêmio 1 x 3 Corinthians
+18|30/05|Bahia 2 x 1 Botafogo
+18|30/05|Santos 3 x 1 Vitória
+18|31/05|Bragantino 3 x 1 Internacional
+18|31/05|Vasco 0 x 1 Atlético-MG
+18|31/05|Palmeiras 1 x 0 Chapecoense
+18|31/05|Cruzeiro 1 x 1 Fluminense
+18|31/05|Remo 1 x 0 São Paulo
+19|16/07|Botafogo 2 x 1 Santos
+19|16/07|Vitória 1 x 0 Vasco
+19|17/07|Fluminense 1 x 1 Bragantino
+19|17/07|Mirassol 2 x 1 Grêmio
+19|21/07|Atlético-MG 1 x 1 Bahia
+19|22/07|Coritiba 1 x 3 Palmeiras
+19|22/07|São Paulo 1 x 2 Athletico-PR
+19|22/07|Internacional 1 x 2 Cruzeiro
+19|22/07|Chapecoense 0 x 4 Flamengo
+19|23/07|Corinthians 3 x 0 Remo
+20|25/07|Athletico-PR 2 x 0 Internacional
+20|25/07|Santos 2 x 2 Chapecoense
+20|25/07|Vasco 1 x 1 Mirassol
+20|26/07|Cruzeiro 0 x 1 Botafogo
+20|26/07|Bahia 1 x 1 Corinthians
+20|26/07|Bragantino 0 x 0 Coritiba
+20|26/07|Grêmio 1 x 1 Fluminense
+20|26/07|Flamengo 1 x 1 São Paulo
+20|26/07|Remo 2 x 0 Vitória
+20|26/07|Palmeiras 1 x 2 Atlético-MG
+21|29/07|Mirassol 2 x 1 Remo
+21|29/07|Internacional 1 x 1 Flamengo
+21|29/07|Fluminense 0 x 0 Bahia
+21|29/07|Vitória 0 x 4 Palmeiras
+21|30/07|Corinthians 0 x 0 Athletico-PR
+21|30/07|Coritiba 0 x 1 Cruzeiro
+21|16/09|Botafogo 3 x 2 Grêmio
+21|02/10|São Paulo vs Santos
+21|03/10|Atlético-MG vs Bragantino
+21|A definir|Chapecoense vs Vasco
+22|08/08|Grêmio 2 x 1 São Paulo
+22|08/08|Remo 2 x 2 Atlético-MG
+22|08/08|Coritiba 2 x 1 Chapecoense
+22|08/08|Botafogo 1 x 1 Fluminense
+22|09/08|Cruzeiro 3 x 1 Mirassol
+22|09/08|Palmeiras 0 x 0 Internacional
+22|09/08|Bahia 0 x 0 Vasco
+22|09/08|Santos 0 x 2 Athletico-PR
+22|09/08|Bragantino 0 x 2 Corinthians
+22|09/08|Flamengo 2 x 0 Vitória
+23|15/08|Fluminense 3 x 2 Palmeiras
+23|15/08|Athletico-PR 1 x 1 Bragantino
+23|15/08|São Paulo 1 x 1 Coritiba
+23|16/08|Chapecoense 3 x 3 Bahia
+23|16/08|Vasco 0 x 3 Santos
+23|16/08|Atlético-MG 3 x 0 Grêmio
+23|16/08|Mirassol 1 x 5 Flamengo
+23|16/08|Vitória 1 x 0 Botafogo
+23|16/08|Corinthians 1 x 2 Cruzeiro
+23|17/08|Internacional 1 x 1 Remo
+24|22/08|Fluminense 2 x 1 Remo
+24|22/08|Internacional 0 x 0 Atlético-MG
+24|22/08|Cruzeiro 2 x 1 Flamengo
+24|23/08|Palmeiras 4 x 1 Vasco
+24|23/08|Bragantino 1 x 0 Grêmio
+24|23/08|Vitória 0 x 2 Bahia
+24|23/08|Santos 1 x 1 Mirassol
+24|23/08|Chapecoense 1 x 0 São Paulo
+24|23/08|Coritiba 2 x 1 Corinthians
+24|24/08|Botafogo 2 x 3 Athletico-PR
+25|29/08|Atlético-MG 2 x 1 Vitória
+25|29/08|São Paulo 2 x 1 Bragantino
+25|29/08|Vasco 3 x 1 Cruzeiro
+25|30/08|Athletico-PR 3 x 3 Fluminense
+25|30/08|Flamengo 3 x 0 Botafogo
+25|30/08|Corinthians 0 x 1 Santos
+25|30/08|Mirassol 1 x 1 Palmeiras
+25|30/08|Grêmio 3 x 1 Chapecoense
+25|30/08|Bahia 3 x 2 Internacional
+25|31/08|Remo 2 x 3 Coritiba
+26|05/09|Bragantino 2 x 3 Bahia
+26|05/09|São Paulo 2 x 0 Atlético-MG
+26|05/09|Fluminense 1 x 0 Vasco
+26|06/09|Coritiba 1 x 2 Mirassol
+26|06/09|Cruzeiro 3 x 1 Athletico-PR
+26|06/09|Internacional 2 x 3 Santos
+26|06/09|Remo 0 x 1 Flamengo
+26|06/09|Botafogo 0 x 0 Palmeiras
+26|06/09|Corinthians 1 x 2 Chapecoense
+26|07/09|Vitória 1 x 0 Grêmio
+27|11/09|Coritiba 3 x 3 Athletico-PR
+27|12/09|Atlético-MG 3 x 1 Fluminense
+27|12/09|Grêmio 1 x 2 Vasco
+27|12/09|Chapecoense 1 x 2 Internacional
+27|12/09|Palmeiras 2 x 0 São Paulo
+27|12/09|Botafogo 1 x 1 Bragantino
+27|12/09|Santos 2 x 1 Cruzeiro
+27|13/09|Mirassol 2 x 2 Vitória
+27|13/09|Flamengo 2 x 1 Corinthians
+27|14/09|Bahia 2 x 1 Remo
+28|19/09|Atlético-MG 1 x 1 Chapecoense
+28|19/09|Mirassol 2 x 0 Botafogo
+28|19/09|Remo 1 x 2 Santos
+28|19/09|Vasco 5 x 0 Coritiba
+28|19/09|São Paulo 1 x 0 Internacional
+28|20/09|Grêmio 0 x 0 Palmeiras
+28|20/09|Corinthians 1 x 3 Fluminense
+28|20/09|Vitória 1 x 3 Cruzeiro
+28|20/09|Flamengo 2 x 1 Bragantino
+28|20/09|Athletico-PR 2 x 1 Bahia
+29|07/10|Bragantino vs Mirassol
+29|07/10|Internacional vs Corinthians
+29|07/10|Remo vs Grêmio
+29|07/10|Vitória vs Chapecoense
+29|07/10|Botafogo vs Vasco
+29|07/10|Cruzeiro vs São Paulo
+29|08/10|Santos vs Flamengo
+29|08/10|Athletico-PR vs Atlético-MG
+29|08/10|Fluminense vs Coritiba
+29|08/10|Palmeiras vs Bahia
+30|10/10|Vasco vs Remo
+30|10/10|São Paulo vs Vitória
+30|11/10|Atlético-MG vs Santos
+30|11/10|Flamengo vs Fluminense
+30|11/10|Palmeiras vs Corinthians
+30|11/10|Grêmio vs Internacional
+30|11/10|Bahia vs Mirassol
+30|11/10|Coritiba vs Botafogo
+30|12/10|Chapecoense vs Athletico-PR
+30|12/10|Bragantino vs Cruzeiro
+31|17 ou 18/10|Fluminense vs Santos
+31|17 ou 18/10|Botafogo vs Chapecoense
+31|17 ou 18/10|São Paulo vs Vasco
+31|17 ou 18/10|Corinthians vs Vitória
+31|17 ou 18/10|Mirassol vs Internacional
+31|17 ou 18/10|Atlético-MG vs Coritiba
+31|17 ou 18/10|Grêmio vs Cruzeiro
+31|17 ou 18/10|Athletico-PR vs Palmeiras
+31|17 ou 18/10|Bahia vs Flamengo
+31|17 ou 18/10|Remo vs Bragantino
+32|24 ou 25/10|Flamengo vs Atlético-MG
+32|24 ou 25/10|Vasco vs Corinthians
+32|24 ou 25/10|Santos vs Bahia
+32|24 ou 25/10|Palmeiras vs Bragantino
+32|24 ou 25/10|Mirassol vs São Paulo
+32|24 ou 25/10|Cruzeiro vs Remo
+32|24 ou 25/10|Internacional vs Botafogo
+32|24 ou 25/10|Coritiba vs Grêmio
+32|24 ou 25/10|Vitória vs Athletico-PR
+32|24 ou 25/10|Chapecoense vs Fluminense
+33|28 ou 29/10|Fluminense vs Internacional
+33|28 ou 29/10|Vasco vs Flamengo
+33|28 ou 29/10|Santos vs Palmeiras
+33|28 ou 29/10|Corinthians vs Mirassol
+33|28 ou 29/10|Bragantino vs Chapecoense
+33|28 ou 29/10|Atlético-MG vs Cruzeiro
+33|28 ou 29/10|Grêmio vs Athletico-PR
+33|28 ou 29/10|Coritiba vs Vitória
+33|28 ou 29/10|Bahia vs São Paulo
+33|28 ou 29/10|Remo vs Botafogo
+34|04 ou 05/11|Flamengo vs Grêmio
+34|04 ou 05/11|Botafogo vs Atlético-MG
+34|04 ou 05/11|São Paulo vs Corinthians
+34|04 ou 05/11|Palmeiras vs Remo
+34|04 ou 05/11|Bragantino vs Santos
+34|04 ou 05/11|Cruzeiro vs Bahia
+34|04 ou 05/11|Internacional vs Coritiba
+34|04 ou 05/11|Athletico-PR vs Vasco
+34|04 ou 05/11|Vitória vs Fluminense
+34|04 ou 05/11|Chapecoense vs Mirassol
+35|18 ou 19/11|Flamengo vs Athletico-PR
+35|18 ou 19/11|Vasco vs Internacional
+35|18 ou 19/11|São Paulo vs Fluminense
+35|18 ou 19/11|Corinthians vs Botafogo
+35|18 ou 19/11|Mirassol vs Atlético-MG
+35|18 ou 19/11|Cruzeiro vs Palmeiras
+35|18 ou 19/11|Grêmio vs Bahia
+35|18 ou 19/11|Coritiba vs Santos
+35|18 ou 19/11|Vitória vs Bragantino
+35|18 ou 19/11|Remo vs Chapecoense
+36|21 ou 22/11|Fluminense vs Mirassol
+36|21 ou 22/11|Botafogo vs São Paulo
+36|21 ou 22/11|Santos vs Grêmio
+36|21 ou 22/11|Palmeiras vs Flamengo
+36|21 ou 22/11|Bragantino vs Vasco
+36|21 ou 22/11|Atlético-MG vs Corinthians
+36|21 ou 22/11|Internacional vs Vitória
+36|21 ou 22/11|Athletico-PR vs Remo
+36|21 ou 22/11|Bahia vs Coritiba
+36|21 ou 22/11|Chapecoense vs Cruzeiro
+37|28 ou 29/11|Fluminense vs Cruzeiro
+37|28 ou 29/11|Botafogo vs Bahia
+37|28 ou 29/11|São Paulo vs Remo
+37|28 ou 29/11|Corinthians vs Grêmio
+37|28 ou 29/11|Mirassol vs Athletico-PR
+37|28 ou 29/11|Atlético-MG vs Vasco
+37|28 ou 29/11|Internacional vs Bragantino
+37|28 ou 29/11|Coritiba vs Flamengo
+37|28 ou 29/11|Vitória vs Santos
+37|28 ou 29/11|Chapecoense vs Palmeiras
+38|02/12|Flamengo vs Chapecoense
+38|02/12|Vasco vs Vitória
+38|02/12|Santos vs Botafogo
+38|02/12|Palmeiras vs Coritiba
+38|02/12|Bragantino vs Fluminense
+38|02/12|Cruzeiro vs Internacional
+38|02/12|Grêmio vs Mirassol
+38|02/12|Athletico-PR vs São Paulo
+38|02/12|Bahia vs Atlético-MG
+38|02/12|Remo vs Corinthians
