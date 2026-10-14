@@ -30,7 +30,7 @@ A correção é feita na própria matéria.</p>
 <ul>
 <li>Direção de reportagem: Ruy Ávila, Andre Veras e João Marcelo</li>
 <li>Redação: São Paulo (SP)</li>
-<li>Titular: MEI inscrito no CNPJ {CNPJ}</li>
+<li>CNPJ: {CNPJ}</li>
 <li>Contato: {EMAIL}</li>
 </ul>
 <p>Leia também a nossa <a href="/politica-de-privacidade/">Política de privacidade</a> e os
@@ -85,8 +85,7 @@ visita o site, para que eles são usados e quais são os seus direitos, de acord
 (Lei Geral de Proteção de Dados, LGPD).</p>
 
 <h2>1. Quem é o responsável</h2>
-<p>O controlador dos dados é a TV Arena Esportes, mantida pelo microempreendedor individual (MEI) inscrito no
-CNPJ {CNPJ}, com redação em São Paulo (SP). Para qualquer assunto
+<p>O controlador dos dados é a TV Arena Esportes, CNPJ {CNPJ}, com redação em São Paulo (SP). Para qualquer assunto
 sobre dados pessoais, inclusive para falar com o encarregado, escreva para {EMAIL}.</p>
 
 <h2>2. Quais dados tratamos</h2>
@@ -157,7 +156,7 @@ compartilhamos; e revogação do consentimento, quando ele for a base do tratame
 "Regras de uso do site TV Arena Esportes: conteúdo, direitos autorais, links externos e responsabilidades.",
 f"""
 <p><i>Última atualização: {ATUALIZADO}.</i></p>
-<p>O site tvarenaesportes.com.br é mantido pelo microempreendedor individual (MEI) inscrito no CNPJ {CNPJ}.
+<p>O site tvarenaesportes.com.br pertence à TV Arena Esportes, CNPJ {CNPJ}.
 Ao usar o site, você concorda com estes termos.</p>
 
 <h2>1. Conteúdo</h2>
