@@ -19,8 +19,8 @@ e-mail tvarenaesportes@gmail.com. Direção de reportagem: Ruy Ávila, Andre Ver
    - Use pelo menos uma fonte confiável por fato e **cruze placar e autores de gol em duas fontes**.
      Nunca invente placar, gol, público ou declaração. Se não confirmar, não publique.
 3. Atualize os dados no `index.html` (seção abaixo).
-4. Rode `python3 tools/check.py`. Só siga se terminar com `OK`.
-5. Faça commit (`Atualização diária DD/MM`) e `git push origin main`.
+4. Rode `python3 tools/check.py`. Ele refaz as páginas estáticas (ver abaixo) e testa tudo. Só siga se terminar com `OK`.
+5. `git add -A` (para entrar o `index.html` **e** as páginas geradas), commit (`Atualização diária DD/MM`) e `git push origin main`.
 6. Termine com um resumo curto em português: matérias novas, placares atualizados, o que ficou pendente.
 
 ## Onde fica cada coisa no `index.html`
@@ -89,5 +89,23 @@ Para ver os identificadores (slugs) de todos: `python3 tools/slugs.py` (ou `pyth
    contexto (tabela, sequência, histórico do confronto); e o que acontece a seguir (próximo jogo, prazo, decisão pendente).
    Pelo menos **2 fontes** diferentes em `src`. Proibido: frases vazias ("promete agitar", "a torcida está ansiosa"),
    opinião sem base, repetir a linha fina no corpo, texto que serviria para qualquer time.
-6. `python3 tools/check.py` → só com `OK` faça commit (`Plantão DD/MM HHh: <assunto>`) e push.
+6. `python3 tools/check.py` → só com `OK` faça `git add -A`, commit (`Plantão DD/MM HHh: <assunto>`) e push.
+   O `git add -A` é obrigatório: cada matéria nova ganha uma pasta própria em `noticias/`.
    Pode publicar mais de uma matéria no mesmo plantão, se houver mais de um assunto realmente relevante.
+
+## Páginas estáticas (para o Google e para a monetização)
+
+O app do `index.html` abre as matérias por âncora (`#an-...`), e o Google não indexa âncoras.
+Por isso o `tools/build_pages.py` gera, a partir do próprio `index.html`, páginas com endereço próprio:
+
+- `/noticias/<id>/` — uma por matéria do `PLANTAO`, do `EXTRA` (com 3 parágrafos ou mais), de `GAMES` e a matéria principal da home.
+  O endereço vem do `id`: **nunca mude o `id` de uma matéria já publicada** (o link quebra no Google).
+- `/<esporte>/` e `/<esporte>/<slug>/` — editorias e páginas de cada clube, equipe, atleta ou lutador.
+- `/noticias/`, `/times/`, `/quem-somos/`, `/contato/`, `/anuncie/`, `/politica-de-privacidade/`, `/termos-de-uso/`.
+- `sitemap.xml`, `news-sitemap.xml` (últimas 48 h, para o Google Notícias) e `robots.txt`.
+
+Regras:
+- Não edite à mão nada dessas pastas: tudo é apagado e refeito a cada execução (lista em `.generated`).
+  Textos institucionais ficam em `tools/institucional.py`; o visual vem do `<style>` do `index.html`.
+- `assets/logo.png` e `assets/og.png` são fixos (logo para o Google e imagem de compartilhamento). Não apague.
+- O `check.py` já roda o `build_pages.py`. Se rodar só ele: `python3 tools/build_pages.py`.

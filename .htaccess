@@ -1,16 +1,29 @@
-# TV Arena Esportes
 DirectoryIndex index.html index.php
 AddDefaultCharset UTF-8
 
-# arquivos internos do repositório não ficam públicos
-<FilesMatch "\.(md|py|json|txt)$">
+# arquivos internos do repositório não ficam públicos (robots.txt e ads.txt ficam liberados)
+<FilesMatch "\.(md|py|json)$">
   Require all denied
 </FilesMatch>
-RedirectMatch 404 ^/(tools|data|\.git)(/|$)
+<FilesMatch "^(?!robots\.txt$|ads\.txt$).*\.txt$">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^\.generated$">
+  Require all denied
+</FilesMatch>
+RedirectMatch 404 ^/(tools|data|\.git|\.github)(/|$)
+
+# endereço sem barra no fim vai para o endereço com barra (evita página duplicada no Google)
+DirectorySlash On
 
 # o navegador sempre busca a versão nova da página
 <IfModule mod_headers.c>
   <FilesMatch "\.html$">
     Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
+  <FilesMatch "\.(css|png|svg)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
 </IfModule>
+
+AddType application/xml .xml

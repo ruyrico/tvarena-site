@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /tools/
+Disallow: /data/
+
+Sitemap: https://tvarenaesportes.com.br/sitemap.xml
+Sitemap: https://tvarenaesportes.com.br/news-sitemap.xml

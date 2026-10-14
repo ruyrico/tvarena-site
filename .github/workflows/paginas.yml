@@ -1,0 +1,40 @@
+# Rede de segurança: se um push mudar o index.html sem trazer as páginas estáticas atualizadas,
+# este fluxo roda tools/build_pages.py e publica o que faltou.
+name: Páginas estáticas
+on:
+  push:
+    branches: [main]
+    paths: ["index.html", "tools/**"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: paginas
+  cancel-in-progress: false
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instala o navegador
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Gera as páginas
+        run: python tools/build_pages.py
+      - name: Publica se algo mudou (ignora só a data do sitemap)
+        run: |
+          git add -A
+          if git diff --cached --quiet -- . ':(exclude)sitemap.xml' ':(exclude)news-sitemap.xml'; then
+            echo "Páginas já estavam em dia."; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Páginas estáticas atualizadas automaticamente"
+          git pull --rebase origin main
+          git push origin main

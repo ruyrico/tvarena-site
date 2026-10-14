@@ -11,6 +11,10 @@
 <meta property="og:title" content="TV Arena Esportes">
 <meta property="og:description" content="O esporte contado de perto: notícias, placares e classificação.">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://tvarenaesportes.com.br/">
+<meta property="og:image" content="https://tvarenaesportes.com.br/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://tvarenaesportes.com.br/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23C8361B'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial' font-weight='900' font-size='30' text-anchor='middle' fill='%23fff'%3ETVA%3C/text%3E%3C/svg%3E">
 <style>[hidden]{display:none!important}body{margin:0}</style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -598,7 +602,7 @@ abbr.br{text-decoration:none;font-size:11px;font-weight:800;color:#1B7340}
 
 <div class="topbar">
   <div class="wrap">
-    <span id="today">Sexta-feira, 25 de setembro de 2026</span>
+    <span id="today"></span>
     <nav>
       <a class="live" href="#inicio"><span class="dot"></span>Plantão esportivo</a>
       <a href="mailto:tvarenaesportes@gmail.com?subject=Quero%20anunciar%20na%20TV%20Arena%20Esportes">Anuncie</a>
@@ -922,10 +926,10 @@ abbr.br{text-decoration:none;font-size:11px;font-weight:800;color:#1B7340}
         <b>TV ARENA <span>ESPORTES</span></b>
         <p>Jornalismo esportivo independente. Notícias, vídeos e transmissões do esporte local e nacional.</p>
       </div>
-      <div class="fcol"><strong>EDITORIAS</strong><a href="#futebol">Futebol</a><a href="#basquete">Basquete</a><a href="#volei">Vôlei</a><a href="#lutas">Lutas</a><a href="#motor">Motor</a><a href="#tenis">Tênis</a><a href="#times">Times</a><a href="#videos">Vídeos</a></div>
-      <div class="fcol"><strong>INSTITUCIONAL</strong><a href="#quem-somos">Quem somos</a><a href="#quem-somos">Expediente</a><a href="mailto:tvarenaesportes@gmail.com?subject=Quero%20anunciar%20na%20TV%20Arena%20Esportes">Anuncie</a><a href="#rodape">Política de privacidade</a><a href="#rodape">Termos de uso</a></div>
-      <div class="fcol"><strong>SIGA</strong><a href="#rodape">Instagram</a><a href="#rodape">YouTube</a><a href="#rodape">TikTok</a><a href="#whatsapp">Canal no WhatsApp</a></div>
-      <div class="fcol"><strong>REDAÇÃO</strong><a class="mail" href="mailto:tvarenaesportes@gmail.com">tvarenaesportes@gmail.com</a><span>São Paulo (SP)</span></div>
+      <div class="fcol"><strong>EDITORIAS</strong><a href="#futebol">Futebol</a><a href="#basquete">Basquete</a><a href="#volei">Vôlei</a><a href="#lutas">Lutas</a><a href="#motor">Motor</a><a href="#tenis">Tênis</a><a href="#times">Times</a><a href="#videos">Vídeos</a><a href="/noticias/">Todas as notícias</a></div>
+      <div class="fcol"><strong>INSTITUCIONAL</strong><a href="/quem-somos/">Quem somos</a><a href="/quem-somos/#expediente">Expediente</a><a href="mailto:tvarenaesportes@gmail.com?subject=Quero%20anunciar%20na%20TV%20Arena%20Esportes">Anuncie</a><a href="/politica-de-privacidade/">Política de privacidade</a><a href="/termos-de-uso/">Termos de uso</a></div>
+      <div class="fcol"><strong>SIGA</strong><a href="#whatsapp">Canal no WhatsApp</a></div>
+      <div class="fcol"><strong>REDAÇÃO</strong><a class="mail" href="mailto:tvarenaesportes@gmail.com">tvarenaesportes@gmail.com</a><span>São Paulo (SP)</span><a href="/contato/">Contato</a></div>
     </div>
     <div class="legal"><span>© 2026 TV Arena Esportes</span><span>Todos os direitos reservados</span></div>
   </div>
@@ -3118,7 +3122,7 @@ abbr.br{text-decoration:none;font-size:11px;font-weight:800;color:#1B7340}
       CATS[p.sp].items.unshift({attrs:attrs,art:p.sp,k:p.k,t:p.t,d:p.d,date:p.date,href:href});
     });
   })();
-  window.TVA={TEAMS:TEAMS,TEAM:TEAM,EQ:EQ};
+  window.TVA={TEAMS:TEAMS,TEAM:TEAM,EQ:EQ,AN:AN,EXTRA:EXTRA,GAMES:GAMES,PLANTAO:PLANTAO,INDEX:INDEX};
 
   Object.keys(AN).forEach(function(k){var a=AN[k];INDEX.push({it:{art:a.sp,t:a.t,date:a.date,href:a.href},cat:a.k,text:norm(a.t+' '+a.d+' '+a.k)});});
   function renderAn(key){
