@@ -109,3 +109,4 @@ Regras:
   Textos institucionais ficam em `tools/institucional.py`; o visual vem do `<style>` do `index.html`.
 - `assets/logo.png` e `assets/og.png` são fixos (logo para o Google e imagem de compartilhamento). Não apague.
 - O `check.py` já roda o `build_pages.py`. Se rodar só ele: `python3 tools/build_pages.py`.
+- `google1552409b0675ae65.html` na raiz é a verificação do Google Search Console. **Nunca apague** (o site perde a verificação).
