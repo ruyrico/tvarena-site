@@ -123,6 +123,8 @@ feitas a este site e a outros sites na internet.</li>
 e conhecer outras opções em <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">aboutads.info</a>.
 Saiba como o Google usa dados em
 <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policies.google.com/technologies/partner-sites</a>.</li>
+<li>Usamos o Google Analytics para medir a audiência (páginas visitadas, tempo de leitura, origem das visitas e tipo de aparelho), de forma agregada, sem identificar o leitor. Saiba mais e veja como desativar em
+<a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">tools.google.com/dlpage/gaoptout</a>.</li>
 <li>O site carrega fontes do Google Fonts; para isso, o seu navegador informa o endereço IP ao Google.</li>
 <li>Vídeos indicados no site abrem no YouTube, que segue a política de privacidade do Google.</li>
 </ul>

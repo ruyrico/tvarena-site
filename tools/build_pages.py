@@ -159,6 +159,7 @@ def plan_items(data):
 
 # --------------------------------------------------------------------------- modelo de página
 CSS_HEAD = ""
+ANALYTICS = ""  # bloco <!-- analytics --> copiado do index.html
 
 
 def page(path, title, desc, body, *, og_type="website", jsonld=None, extra_head="", noindex=False):
@@ -189,7 +190,7 @@ def page(path, title, desc, body, *, og_type="website", jsonld=None, extra_head=
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800;900&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap">
 <link rel="stylesheet" href="/assets/site.css?v={CSS_HEAD}">
 {ld}
-</head>
+{ANALYTICS}</head>
 <body class="static">
 <div class="topbar">
   <div class="wrap">
@@ -302,8 +303,10 @@ ORG = {"@type": "NewsMediaOrganization", "name": "TV Arena Esportes", "url": SIT
 
 # --------------------------------------------------------------------------- build
 def main():
-    global CSS_HEAD
+    global CSS_HEAD, ANALYTICS
     src = open(INDEX, encoding="utf-8").read()
+    m = re.search(r"<!-- analytics.*?<!-- /analytics -->\n?", src, re.S)
+    ANALYTICS = m.group(0) if m else ""
     data = extract()
     items = plan_items(data)
 
