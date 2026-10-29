@@ -1281,11 +1281,12 @@ gtag('js',new Date());gtag('config',id);})(window.TVA_GA);
     ['vila-nova','Vila Nova','Goiânia (GO)','B','#C8102E','#F5F5F5','solid','VIL','#fff']
   ];
   var TEAM={};TEAMS.forEach(function(t){TEAM[t[0]]={slug:t[0],name:t[1],city:t[2],serie:t[3],c1:t[4],c2:t[5],pat:t[6],sig:t[7],tc:t[8]};});
-  /* Assinatura: futebol masculino da Série A → Ruy Ávila; da Série B → Andre Veras; o resto, Redação */
-  var AUTORES={'ruy-avila':{nome:'Ruy Ávila',cargo:'Redator-chefe da Série A'},'andre-veras':{nome:'Andre Veras',cargo:'Redator-chefe da Série B'}};
+  /* Assinatura: copas e competições internacionais com clubes brasileiros → João Marcelo; Série A → Ruy Ávila; Série B → Andre Veras; o resto, Redação */
+  var AUTORES={'ruy-avila':{nome:'Ruy Ávila',cargo:'Redator-chefe da Série A'},'andre-veras':{nome:'Andre Veras',cargo:'Redator-chefe da Série B'},'joao-marcelo':{nome:'João Marcelo',cargo:'Copas e competições internacionais'}};
   function autorDe(sp,slugs,k){
     if(sp!=='futebol')return null;k=k||'';
     if(/feminin|sele[çc][ãa]o|sub-\d/i.test(k))return null;
+    if(/libertadores|sul-americana|copa do brasil|mundial de clubes|recopa|supercopa|intercontinental/i.test(k)&&(slugs||[]).some(function(s){return TEAM[s];}))return 'joao-marcelo';
     if(/s[ée]rie b/i.test(k))return 'andre-veras';
     var ser=(slugs||[]).filter(function(s){return TEAM[s];}).map(function(s){return TEAM[s].serie;});
     if(!ser.length)return null;

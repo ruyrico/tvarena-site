@@ -15,4 +15,11 @@ AUTORES = {
                "Formado em Direito e estudioso do futebol, atua como jornalista esportivo e acompanha de perto os 20 clubes "
                "da segunda divisão.",
     },
+    "joao-marcelo": {
+        "nome": "João Marcelo",
+        "cargo": "Copas e competições internacionais",
+        "bio": "João Marcelo é jovem jornalista e um dos fundadores da TV Arena Esportes, onde assina a cobertura de copas e "
+               "competições internacionais com clubes brasileiros, como Libertadores, Sul-Americana e Copa do Brasil. Une o "
+               "jornalismo à rotina de atleta de futebol de base e é estudioso das estratégias de jogo de clubes nacionais e internacionais.",
+    },
 }
