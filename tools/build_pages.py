@@ -389,13 +389,17 @@ def main():
     for x in items:
         path = f"/noticias/{x['id']}/"
         when = x["date"]
-        art = fix_links(x["html"]).replace('class="wrap article"', 'class="article"')
+        art = fix_links(x["html"]).replace('class="wrap article"', 'class="article"').replace('src="assets/autores/', 'src="/assets/autores/')
+        am = re.search(r'data-autor="([a-z-]+)"', x["html"])
+        x["autor"] = am.group(1) if am and am.group(1) in AUTORES else None
         sp_name = SPORTS.get(x["sp"], "Esportes")
         ld = [{"@context": "https://schema.org", "@type": "NewsArticle", "headline": x["t"][:110],
                "description": x["d"], "mainEntityOfPage": SITE + path, "inLanguage": "pt-BR",
                "datePublished": when.isoformat() if when else None, "dateModified": when.isoformat() if when else None,
                "image": [SITE + "/assets/og.png"], "articleSection": sp_name,
-               "author": {"@type": "Organization", "name": "Redação TV Arena Esportes", "url": SITE + "/quem-somos/"},
+               "author": ({"@type": "Person", "name": AUTORES[x["autor"]]["nome"], "jobTitle": AUTORES[x["autor"]]["cargo"],
+                           "url": SITE + f"/autor/{x['autor']}/", "image": SITE + f"/assets/autores/{x['autor']}.jpg"}
+                          if x["autor"] else {"@type": "Organization", "name": "Redação TV Arena Esportes", "url": SITE + "/quem-somos/"}),
                "publisher": ORG,
                "isBasedOn": [u for _, u in x["src"]] or None},
               crumbs_ld([("Início", "/"), (sp_name, f"/{x['sp']}/"), (x["t"][:80], path)])]
@@ -418,6 +422,22 @@ def main():
               page(path, title, x["d"] or x["t"], f'<section class="wrap teams-page">{art}</section>{more}',
                    og_type="article", jsonld=ld, extra_head=head))
         smap.append((path, when, x))
+
+    # páginas dos jornalistas
+    for a, o in AUTORES.items():
+        lst = [x for x in items if x.get("autor") == a]
+        path = f"/autor/{a}/"
+        body = (f'<section class="wrap sx-page"><span class="kicker">Equipe TV Arena Esportes</span>'
+                f'<div class="byline"><img src="/assets/autores/{a}.jpg" alt="{esc(o["nome"])}" width="96" height="96" style="width:96px;height:96px">'
+                f'<div><h1 class="display" style="color:var(--ink);margin:0">{esc(o["nome"])}</h1><small>{esc(o["cargo"])}</small></div></div>'
+                f'<p class="sx-lead" style="margin-top:18px">{esc(o["bio"])}</p><h2 class="sx-sec">Matérias assinadas</h2>'
+                + (news_list(lst) if lst else '<p class="sx-lead">Nenhuma matéria assinada ainda.</p>') + '</section>')
+        ld = [{"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": {
+                  "@type": "Person", "name": o["nome"], "jobTitle": o["cargo"], "description": o["bio"],
+                  "image": SITE + f"/assets/autores/{a}.jpg", "url": SITE + path, "worksFor": ORG}},
+              crumbs_ld([("Início", "/"), ("Quem somos", "/quem-somos/"), (o["nome"], path)])]
+        write(path.strip("/") + "/index.html", page(path, f"{o['nome']}, {o['cargo'].lower()} | TV Arena Esportes", o["bio"][:300], body, jsonld=ld))
+        smap.append((path, lst[0]["date"] if lst else None, None))
 
     # páginas de clube / equipe / atleta
     for (sp, s), lst in sorted(by_who.items()):
@@ -535,4 +555,5 @@ def render_images():
 
 if __name__ == "__main__":
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from autores import AUTORES
     main()
