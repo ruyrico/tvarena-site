@@ -87,9 +87,22 @@ def extract():
             eq:eq,
             plantao:T.PLANTAO.map(function(p){return {id:p.id,sp:p.sp,quem:p.quem||[],k:p.k,t:p.t,d:p.d,date:p.date,hora:p.hora||'',body:p.body,src:p.src||[]};}),
             extra:T.EXTRA.map(function(e,i){return {id:e.id,i:i,sp:e.sport||'',teams:e.teams||[],k:e.k,t:e.t,d:e.d,date:e.date,body:e.body||[],src:e.src||[]};}),
-            games:T.GAMES.map(function(g){return {id:g.id,teams:[g.g[0],g.g[2]],k:g.k,date:g.date,src:g.src||[],n:(g.ctx||[]).length+2};})
+            games:T.GAMES.map(function(g){return {id:g.id,teams:[g.g[0],g.g[2]],sc:[g.g[0],g.g[1],g.g[3],g.g[2]],k:g.k,date:g.date,src:g.src||[],n:(g.ctx||[]).length+2};})
           };}""")
         out.update(data)
+
+        # escudos (Série A e B), para as capas das matérias
+        pg.evaluate("()=>{location.hash='times'}")
+        pg.wait_for_timeout(400)
+        js = """()=>{var o={};document.querySelectorAll('a.team[href^="#time-"]').forEach(function(a){var s=a.querySelector('svg');
+            if(s)o[a.getAttribute('href').slice(6)]=[s.outerHTML,a.querySelector('b').textContent];});return o;}"""
+        badges = pg.evaluate(js)
+        pg.evaluate("()=>{var b=[].slice.call(document.querySelectorAll('#teamsRoot button')).filter(function(b){return b.textContent==='Série B';})[0];if(b)b.click();}")
+        pg.wait_for_timeout(300)
+        badges.update(pg.evaluate(js))
+        out["badges"] = badges
+        pg.evaluate("()=>{location.hash='inicio'}")
+        pg.wait_for_timeout(200)
 
         # matéria principal da home (HTML fixo em #view-article)
         pg.evaluate("()=>{location.hash='materia'}")
@@ -146,7 +159,8 @@ def plan_items(data):
         d = parse_date(g["date"])
         gid = f"jogo-{slugify(g['id'])}-{d.strftime('%d%m') if d else ''}".rstrip("-")
         items.append(dict(kind="jogo", id=gid, href=f"#jogo-{g['id']}", alias=[f"#jogo-{g['id']}"], sp="futebol",
-                          who=[t for t in g["teams"] if valid("futebol", t)], k=g["k"], date=d, src=g["src"], n=g["n"]))
+                          who=[t for t in g["teams"] if valid("futebol", t)], k=g["k"], date=d, src=g["src"], n=g["n"],
+                          score=tuple(g["sc"]) if g.get("sc") and None not in g["sc"] else None))
     items = [x for x in items if x["n"] >= MIN_PARAGRAPHS]
     ids = set()
     for x in items:  # ids únicos
@@ -162,7 +176,7 @@ CSS_HEAD = ""
 ANALYTICS = ""  # bloco <!-- analytics --> copiado do index.html
 
 
-def page(path, title, desc, body, *, og_type="website", jsonld=None, extra_head="", noindex=False):
+def page(path, title, desc, body, *, og_type="website", jsonld=None, extra_head="", noindex=False, image=None):
     url = SITE + path
     ld = "".join(f'<script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in (jsonld or []))
     robots = '<meta name="robots" content="noindex,follow">' if noindex else '<meta name="robots" content="index,follow,max-image-preview:large">'
@@ -181,7 +195,9 @@ def page(path, title, desc, body, *, og_type="website", jsonld=None, extra_head=
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{SITE}/assets/og.png">
+<meta property="og:image" content="{SITE}{image or '/assets/og.png'}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 {extra_head}<link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
@@ -385,6 +401,10 @@ def main():
           "<text x='32' y='44' font-family='Arial Black,Arial' font-weight='900' font-size='30' text-anchor='middle' fill='#fff'>TVA</text></svg>")
     render_images()
 
+    # capas das matérias
+    season = json.loads(re.search(r"var SEASON=(\{.*?\});", src).group(1))
+    capas = render_covers(items, data.get("badges", {}), season)
+
     # matérias
     for x in items:
         path = f"/noticias/{x['id']}/"
@@ -396,7 +416,7 @@ def main():
         ld = [{"@context": "https://schema.org", "@type": "NewsArticle", "headline": x["t"][:110],
                "description": x["d"], "mainEntityOfPage": SITE + path, "inLanguage": "pt-BR",
                "datePublished": when.isoformat() if when else None, "dateModified": when.isoformat() if when else None,
-               "image": [SITE + "/assets/og.png"], "articleSection": sp_name,
+               "image": [SITE + capas[x["id"]].split("?")[0]], "articleSection": sp_name,
                "author": ({"@type": "Person", "name": AUTORES[x["autor"]]["nome"], "jobTitle": AUTORES[x["autor"]]["cargo"],
                            "url": SITE + f"/autor/{x['autor']}/", "image": SITE + f"/assets/autores/{x['autor']}.jpg"}
                           if x["autor"] else {"@type": "Organization", "name": "Redação TV Arena Esportes", "url": SITE + "/quem-somos/"}),
@@ -420,7 +440,7 @@ def main():
                 + (f'<ul class="sx-chips">{who_chips}</ul>' if who_chips else "") + news_list(rel5) + "</section>")
         write(path.strip("/") + "/index.html",
               page(path, title, x["d"] or x["t"], f'<section class="wrap teams-page">{art}</section>{more}',
-                   og_type="article", jsonld=ld, extra_head=head))
+                   og_type="article", jsonld=ld, extra_head=head, image=capas[x["id"]]))
         smap.append((path, when, x))
 
     # páginas dos jornalistas
@@ -556,4 +576,5 @@ def render_images():
 if __name__ == "__main__":
     sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
     from autores import AUTORES
+    from capas import render_covers
     main()

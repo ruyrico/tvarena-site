@@ -125,3 +125,11 @@ fotos fixas em `assets/autores/`). Não é preciso fazer nada ao publicar, basta
 
 Cada jornalista tem página própria em `/autor/<slug>/`, gerada pelo `build_pages.py`. Não troque as fotos nem os textos
 das biografias sem pedido do Ruy.
+
+## Capas das matérias
+
+Cada matéria ganha uma capa própria (1200x630) em `assets/capas/<id>.jpg`, gerada sozinha pelo `build_pages.py`
+(código em `tools/capas.py`) e usada no Google, no Discover e na pré-visualização do link no WhatsApp/redes.
+Mostra editoria, título, jornalista que assina e, em matéria de resultado de futebol, escudos e placar
+(o placar vem de `SEASON`, por isso é importante lançar o resultado lá). Só é refeita quando título, editoria, autor
+ou placar mudam. Arte 100% própria: não use fotos de terceiros. Fontes livres (OFL) em `tools/fonts/`.
