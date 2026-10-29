@@ -110,3 +110,18 @@ Regras:
 - `assets/logo.png` e `assets/og.png` são fixos (logo para o Google e imagem de compartilhamento). Não apague.
 - O `check.py` já roda o `build_pages.py`. Se rodar só ele: `python3 tools/build_pages.py`.
 - `google1552409b0675ae65.html` na raiz é a verificação do Google Search Console. **Nunca apague** (o site perde a verificação).
+
+## Assinatura das matérias (jornalistas)
+
+A assinatura é automática (função `autorDe` no `index.html`; nomes, cargos e biografias em `tools/autores.py`;
+fotos fixas em `assets/autores/`). Não é preciso fazer nada ao publicar, basta preencher `k` e `quem` corretamente:
+
+- Copas e competições internacionais com clubes brasileiros (Libertadores, Sul-Americana, Copa do Brasil, Mundial,
+  Recopa, Supercopa) → **João Marcelo**.
+- Futebol da Série A (`k` sem "Série B" e todos os clubes de `quem` da Série A) → **Ruy Ávila**.
+- Série B (`k` com "Série B" ou todos os clubes da Série B) → **Andre Veras**.
+- Todo o resto (vôlei, basquete, lutas, motor, tênis, futebol feminino, Seleção, notas sem clube, matéria principal da home)
+  → **Redação TV Arena**.
+
+Cada jornalista tem página própria em `/autor/<slug>/`, gerada pelo `build_pages.py`. Não troque as fotos nem os textos
+das biografias sem pedido do Ruy.
