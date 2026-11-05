@@ -18,7 +18,7 @@ DirectorySlash On
 
 # o navegador sempre busca a versão nova da página
 <IfModule mod_headers.c>
-  <FilesMatch "\.html$">
+  <FilesMatch "(\.html|^links\.js)$">
     Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
   <FilesMatch "\.(css|png|svg)$">

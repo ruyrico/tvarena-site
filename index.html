@@ -224,6 +224,12 @@ footer{background:var(--dark);color:var(--dark-text);padding-block:56px 36px}
 .byline{display:flex;align-items:center;gap:14px;margin:18px 0 4px}.byline img{width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);flex:none}.byline b{display:block;font-family:var(--sans);font-size:17px;color:var(--ink)}.byline b a{color:inherit}.byline b a:hover{color:var(--accent)}.byline small{display:block;font-family:var(--sans);font-size:13.5px;color:var(--muted);margin-top:2px}
 .meta{display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:14px;color:var(--muted);padding-block:14px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .meta b{color:var(--ink)}
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+.share>span{font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:12px}
+.share button{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;font-size:14px;color:var(--ink);background:transparent;border:1px solid var(--rule);border-radius:999px;padding:8px 16px;cursor:pointer;min-height:40px}
+.share button:hover{border-color:var(--ink)}
+.share .sh-wa{background:#25D366;border-color:#25D366;color:#fff}
+.share .sh-wa:hover{background:#1DA851;border-color:#1DA851}
 .art-photo{margin:32px 0 8px}
 .art-photo .frame{aspect-ratio:21/9;max-width:100%}
 .art-photo figcaption{font-size:13px;color:var(--muted);padding-top:10px}
@@ -3607,9 +3613,41 @@ gtag('js',new Date());gtag('config',id);})(window.TVA_GA);
     root.querySelectorAll('.rise,.wipe').forEach(function(el){el.style.animation='none';void el.offsetWidth;el.style.animation='';});
   }
   function show(v){home.hidden=v!==home;art.hidden=v!==art;catView.hidden=v!==catView;timesView.hidden=v!==timesView;clsView.hidden=v!==clsView;}
+  /* endereço próprio da matéria (/noticias/<id>/): é ele que o WhatsApp, o Facebook e o Google leem */
+  var WEB=/^https?:$/.test(location.protocol),lastNav='';
+  function curHash(){return location.hash||(history.state&&history.state.tvaH)||'';}
+  function canonUrl(h){var L=window.TVA_LINKS;return L&&L[h||curHash()]||'';}
+  function syncUrl(){
+    if(!WEB||!history.replaceState)return;
+    var h=curHash(),p=canonUrl(h);
+    try{
+      if(p){if(location.pathname!==p||location.search||location.hash)history.replaceState({tvaH:h},'',p);}
+      else if(location.pathname!=='/'&&location.pathname!=='/index.html')history.replaceState(null,'','/'+location.search+h);
+    }catch(e){}
+    lastNav=curHash()+'|'+location.pathname;
+  }
+  function onNav(){if(curHash()+'|'+location.pathname===lastNav)return;route();}
+  if(WEB){var ls=document.createElement('script');ls.src='/assets/links.js';ls.async=true;ls.onload=syncUrl;document.head.appendChild(ls);}
+  var SHARE_SVG={wa:'<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>',
+    cp:'<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M10 14a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 10a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>'};
+  function addShare(root){
+    var hd=root&&root.querySelector('.art-head');if(!hd||hd.querySelector('.share'))return;
+    var d=document.createElement('div');d.className='share rise d4';
+    d.innerHTML='<span>Compartilhe</span><button type="button" class="sh-wa" data-share="wa">'+SHARE_SVG.wa+'WhatsApp</button><button type="button" data-share="copy">'+SHARE_SVG.cp+'Copiar link</button>';
+    hd.appendChild(d);
+  }
+  document.addEventListener('click',function(e){
+    var b=e.target.closest&&e.target.closest('[data-share]');if(!b)return;
+    var a=b.closest('article'),t=a&&a.querySelector('h1')?a.querySelector('h1').textContent.trim():document.title;
+    var p=canonUrl(),u=p?location.origin+p:location.href.split('#')[0]+(location.hash||'');
+    if(b.getAttribute('data-share')==='wa'){window.open('https://wa.me/?text='+encodeURIComponent(t+'\n\n'+u),'_blank','noopener');return;}
+    function ok(){var o=b.lastChild.textContent;b.lastChild.textContent='Link copiado ✓';setTimeout(function(){b.lastChild.textContent=o;},2000);}
+    try{navigator.clipboard.writeText(u).then(ok,fb);}catch(_){fb();}
+    function fb(){var x=document.createElement('textarea');x.value=u;document.body.appendChild(x);x.select();try{document.execCommand('copy');ok();}catch(_){}x.remove();}
+  });
   function route(){
     if(calModal&&!calModal.hidden){calModal.hidden=true;document.body.style.overflow='';}
-    var h=(location.hash||'').replace('#','')||'inicio', navKey=h;
+    var h=curHash().replace('#','')||'inicio', navKey=h;
     if(h==='materia'){show(art);replay(art);window.scrollTo(0,0);navKey='futebol';}
     else if(CATS[h]){renderCat(h);show(catView);window.scrollTo(0,0);}
     else if(h==='classificacao'){clsSport=homeSport||'futebol';renderCls();show(clsView);window.scrollTo(0,0);}
@@ -3629,9 +3667,12 @@ gtag('js',new Date());gtag('config',id);})(window.TVA_GA);
     }
     bar.style.transform='scaleX(0)';
     document.querySelectorAll('.mainnav a').forEach(function(a){a.classList.toggle('on',a.getAttribute('data-nav')===navKey);});
+    if(!art.hidden)addShare(art);else if(!timesView.hidden)addShare(teamsRoot);
+    syncUrl();
   }
   paint(document);
-  window.addEventListener('hashchange',route);
+  window.addEventListener('hashchange',onNav);
+  window.addEventListener('popstate',onNav);
   route();
 
   window.addEventListener('scroll',function(){

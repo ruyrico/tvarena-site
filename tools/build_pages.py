@@ -248,6 +248,14 @@ def page(path, title, desc, body, *, og_type="website", jsonld=None, extra_head=
 <script>
 try{{var s=new Date().toLocaleDateString('pt-BR',{{weekday:'long',day:'numeric',month:'long',year:'numeric'}});
 document.getElementById('today').textContent=s.charAt(0).toUpperCase()+s.slice(1);}}catch(e){{}}
+document.addEventListener('click',function(e){{
+  var b=e.target.closest&&e.target.closest('[data-share]');if(!b)return;
+  var h=document.querySelector('main h1'),t=h?h.textContent.trim():document.title,c=document.querySelector('link[rel=canonical]'),u=c?c.href:location.href.split('#')[0];
+  if(b.getAttribute('data-share')==='wa'){{window.open('https://wa.me/?text='+encodeURIComponent(t+'\\n\\n'+u),'_blank','noopener');return;}}
+  function ok(){{var o=b.lastChild.textContent;b.lastChild.textContent='Link copiado ✓';setTimeout(function(){{b.lastChild.textContent=o;}},2000);}}
+  function fb(){{var x=document.createElement('textarea');x.value=u;document.body.appendChild(x);x.select();try{{document.execCommand('copy');ok();}}catch(_){{}}x.remove();}}
+  try{{navigator.clipboard.writeText(u).then(ok,fb);}}catch(_){{fb();}}
+}});
 </script>
 </body>
 </html>
@@ -364,6 +372,9 @@ def main():
     hmap["#times"] = "/times/"
     hmap["#inicio"] = "/"
 
+    # mapa para o app: cada #hash de matéria aponta para a página própria dela (usada na barra de endereço e no compartilhar)
+    links = {a: v for a, v in hmap.items() if v.startswith("/noticias/")}
+
     def fix_links(h):
         def sub(m):
             href = html.unescape(m[1])
@@ -400,6 +411,7 @@ def main():
     write("assets/icon.svg", "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='#C8361B'/>"
           "<text x='32' y='44' font-family='Arial Black,Arial' font-weight='900' font-size='30' text-anchor='middle' fill='#fff'>TVA</text></svg>")
     render_images()
+    write("assets/links.js", "window.TVA_LINKS=" + json.dumps(links, ensure_ascii=False, separators=(",", ":")) + ";\n")
 
     # capas das matérias
     season = json.loads(re.search(r"var SEASON=(\{.*?\});", src).group(1))

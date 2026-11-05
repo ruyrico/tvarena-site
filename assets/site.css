@@ -201,6 +201,12 @@ footer{background:var(--dark);color:var(--dark-text);padding-block:56px 36px}
 .byline{display:flex;align-items:center;gap:14px;margin:18px 0 4px}.byline img{width:60px;height:60px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);flex:none}.byline b{display:block;font-family:var(--sans);font-size:17px;color:var(--ink)}.byline b a{color:inherit}.byline b a:hover{color:var(--accent)}.byline small{display:block;font-family:var(--sans);font-size:13.5px;color:var(--muted);margin-top:2px}
 .meta{display:flex;gap:18px;flex-wrap:wrap;align-items:center;font-size:14px;color:var(--muted);padding-block:14px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
 .meta b{color:var(--ink)}
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+.share>span{font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:12px}
+.share button{display:inline-flex;align-items:center;gap:8px;font:inherit;font-weight:700;font-size:14px;color:var(--ink);background:transparent;border:1px solid var(--rule);border-radius:999px;padding:8px 16px;cursor:pointer;min-height:40px}
+.share button:hover{border-color:var(--ink)}
+.share .sh-wa{background:#25D366;border-color:#25D366;color:#fff}
+.share .sh-wa:hover{background:#1DA851;border-color:#1DA851}
 .art-photo{margin:32px 0 8px}
 .art-photo .frame{aspect-ratio:21/9;max-width:100%}
 .art-photo figcaption{font-size:13px;color:var(--muted);padding-top:10px}

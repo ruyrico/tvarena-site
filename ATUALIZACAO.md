@@ -133,3 +133,9 @@ Cada matéria ganha uma capa própria (1200x630) em `assets/capas/<id>.jpg`, ger
 Mostra editoria, título, jornalista que assina e, em matéria de resultado de futebol, escudos e placar
 (o placar vem de `SEASON`, por isso é importante lançar o resultado lá). Só é refeita quando título, editoria, autor
 ou placar mudam. Arte 100% própria: não use fotos de terceiros. Fontes livres (OFL) em `tools/fonts/`.
+
+## Links compartilháveis (WhatsApp, redes sociais)
+
+Ao abrir uma matéria no app, a barra de endereço passa a mostrar `/noticias/<id>/` (e não `/#an-...`), e cada matéria tem os botões
+"WhatsApp" e "Copiar link". Assim o WhatsApp mostra o título, a linha fina e a capa da própria matéria.
+O mapa `#hash → /noticias/<id>/` é gerado pelo `build_pages.py` em `assets/links.js`. Não edite à mão.
